@@ -42,33 +42,51 @@ const toolboxItems = [
 const hobbies = [
   {
     title: "Muay Thai",
-    emoji: "🥊"
+    emoji: "🥊",
+    left: "5%",
+    top: "5%"
   },
   {
     title: "Rugby",
-    emoji: "🏉"
+    emoji: "🏉",
+    left: "50%",
+    top: "5%"
   },
   {
     title: "Rubik's Cube",
-    emoji: "🧠"
+    emoji: "🧠",
+    left: "10%",
+    top: "35%"
   },
   {
     title: "Piano",
-    emoji: "🎹"
+    emoji: "🎹",
+    left: "35%",
+    top: "45%"
   },
   {
     title: "Basketball",
-    emoji: "🏀"
+    emoji: "🏀",
+    left: "65%",
+    top: "25%"
   },
   {
     title: "Reaserch",
-    emoji: "💻"
+    emoji: "💻",
+    left: "5%",
+    top: "65%"
+  },
+  {
+    title: "Gaming",
+    emoji: "🎮",
+    left: "45%",
+    top: "70% "
   },
 ]
 
 export const AboutSection = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader 
           eyebrow="About Me"
@@ -76,36 +94,39 @@ export const AboutSection = () => {
           description="I specialize in creating engaging, user-friendly websites that drive results and enhance brand presence."
         />
         <div className="mt-20 flex flex-col gap-8">
-          <Card className="h-[320px]">
-            <CardHeader title="Education" description="Explore the grades i have achieved" />
-            <div>
-              <h4>University of Southampton</h4>
-              <p>BSc Computer Science | 2:1 </p>
-              <h4>Beths Grammer School</h4>
-              <ul>
-                <li>Computer Science | A*</li>
-                <li>Maths | A*</li>
-                <li>Physics | A</li>
-              </ul>
-            </div>
-          </Card>
-          <Card className="h-[320px] p-0">
-            <CardHeader title="My Toolbox" description="Tools ive used throughout my journey" className="px-6 pt-6" />
-            <ToolboxItems toolboxItems={toolboxItems} className="mt-6" />
-            <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2"/>
-          </Card>
-          <Card>
-            <CardHeader title="Beyond the Code" description="Explore my intrests" />
-            <div>
+          <div className="md:grid md:grid-cols-5 md:gap-8">
+            <Card className="h-[320px] md:col-span-2">
+              <CardHeader title="Education" description="Explore the grades i have achieved" />
+              <div>
+                <h4>University of Southampton</h4>
+                <p>BSc Computer Science | 2:1 </p>
+                <h4>Beths Grammer School</h4>
+                <ul>
+                  <li>Computer Science | A*</li>
+                  <li>Maths | A*</li>
+                  <li>Physics | A</li>
+                </ul>
+              </div>
+            </Card>
+            <Card className="h-[320px] p-0 md:col-span-3">
+              <CardHeader title="My Toolbox" description="Tools ive used throughout my journey" className="px-6 pt-6" />
+              <ToolboxItems toolboxItems={toolboxItems} className="mt-6" />
+              <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2"/>
+            </Card>
+          </div>
+          <Card className="h-[320px] p-0 flex flex-col">
+            <CardHeader title="Beyond the Code" description="Explore my intrests" className="px-6 py-6" />
+            <div className="relative flex-1">
               {hobbies.map(hobby => (
-                <div key={hobby.title}>
-                  <span>{hobby.title}</span>
+                <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                     style={{ left: hobby.left, top: hobby.top }}>
+                  <span className="font-medium text-gray-950">{hobby.title}</span>
                   <span>{hobby.emoji}</span>
                 </div>
               ))}
             </div>
           </Card>
-          <Card>
+          <Card className="h-[320px]"> 
             <CardHeader title="Download CV" description="IDK what to put here" />
           </Card>
         </div>

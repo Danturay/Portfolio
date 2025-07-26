@@ -18,7 +18,7 @@ export const CardHeader = ({
                 <Image src={logo} alt="Logo" width={37} height={37}/>
                 <h3 className="font-serif text-3xl">{title}</h3>
             </div>
-            <p className="text-sm text-white/60">{description}</p>
+            <p className="text-sm lg:text-base lg:max-w-xs text-white/60">{description}</p>
         </div>
     );
 };

@@ -94,8 +94,8 @@ export const AboutSection = () => {
           description="I specialize in creating engaging, user-friendly websites that drive results and enhance brand presence."
         />
         <div className="mt-20 flex flex-col gap-8">
-          <div className="md:grid md:grid-cols-5 md:gap-8">
-            <Card className="h-[320px] md:col-span-2">
+          <div className="grid grid-cols-1 gap-8  md:grid md:grid-cols-5 md:gap-8 lg:grid-cols-3">
+            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader title="Education" description="Explore the grades i have achieved" />
               <div>
                 <h4>University of Southampton</h4>
@@ -108,27 +108,29 @@ export const AboutSection = () => {
                 </ul>
               </div>
             </Card>
-            <Card className="h-[320px] p-0 md:col-span-3">
+            <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
               <CardHeader title="My Toolbox" description="Tools ive used throughout my journey" className="px-6 pt-6" />
               <ToolboxItems toolboxItems={toolboxItems} className="mt-6" />
               <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2"/>
             </Card>
           </div>
-          <Card className="h-[320px] p-0 flex flex-col">
-            <CardHeader title="Beyond the Code" description="Explore my intrests" className="px-6 py-6" />
-            <div className="relative flex-1">
-              {hobbies.map(hobby => (
-                <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
-                     style={{ left: hobby.left, top: hobby.top }}>
-                  <span className="font-medium text-gray-950">{hobby.title}</span>
-                  <span>{hobby.emoji}</span>
-                </div>
-              ))}
-            </div>
-          </Card>
-          <Card className="h-[320px]"> 
-            <CardHeader title="Download CV" description="IDK what to put here" />
-          </Card>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:grid-cols-3">
+            <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+              <CardHeader title="Beyond the Code" description="Explore my intrests" className="px-6 py-6" />
+              <div className="relative flex-1">
+                {hobbies.map(hobby => (
+                  <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                      style={{ left: hobby.left, top: hobby.top }}>
+                    <span className="font-medium text-gray-950">{hobby.title}</span>
+                    <span>{hobby.emoji}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+            <Card className="h-[320px] col-span-2 lg:col-span-1"> 
+              <CardHeader title="Download CV" description="IDK what to put here" />
+            </Card>
+          </div>
         </div>
       </div>
     </div>

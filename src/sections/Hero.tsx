@@ -14,8 +14,8 @@ export const HeroSection = () => {
             <div className="text-sm font-medium">Avaliable for new Projects</div>
           </div>
        </div>
-       <h1 className="font-serif text-3xl text-center mt-8 tracking-wide">Exploring The World of Medical AI</h1>
-       <p className="mt-4 text-center text-white/60 md:text-lg">Join me on a journey through the fascinating intersection of healthcare and artificial intelligence.</p>
+       <h1 className="font-serif text-3xl text-center mt-8 tracking-wide">AI practitioner driving innovation in healthcare and beyond.</h1>
+       <p className="mt-4 text-center text-white/60 md:text-lg">As a dedicated student in artificial intelligence, I specialize in medical AI while embracing the full spectrum of AI opportunities to create impactful, real-world solutions across industries.</p>
        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
         <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
           <span className="font-semibold">Explore My Work </span>

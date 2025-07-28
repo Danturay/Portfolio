@@ -12,13 +12,13 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "University of Southampton",
+    year: "2025",
+    title: "Intergrating High Dnisty fNIRS with AI for Lie Detection",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Achieved a First Class Honers for this 3rd Year Individual Project" },
+      { title: "Conducted participant Trails to collect nurological primary data" },
+      { title: "Implement CNN, LSTM and Hybrid Models" },
     ],
     linkName: "View Live Site",
     link: "https://youtu.be/4k7IdSLxh6w",

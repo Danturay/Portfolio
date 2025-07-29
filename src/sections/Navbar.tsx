@@ -1,57 +1,72 @@
-import { useEffect } from "react";
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import NavLink from "./NavLink";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import MenuOverlay from "@/sections/MenuOverlay";
+import Image from "next/image";
+import logo from "@/assets//images/fullLogo.png";
 
-export const Navbar = ({ menuOpen, setMenuOpen }) => {
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-  }, [menuOpen]);
+const navLinks = [
+  {
+    title: "Home",
+    path: "#home",
+  },
+  {
+    title: "Projects",
+    path: "#projects",
+  },
+  {
+    title: "About",
+    path: "#about",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
+  },
+];
+
+const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-mono text-xl font-bold text-white">
-            {" "}
-            pedro<span className="text-blue-500">.tech</span>{" "}
-          </a>
-
-          <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            &#9776;
-          </div>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#home"
-              className="text-gray-300 hove:text-white transition-colors"
+    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 backdrop-blur-md bg-transparent bg-opacity-100">
+      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
+       <Link href={"/"} className="flex items-center">
+        <Image src={logo} alt="Logo" width={250} height={250} />
+        </Link>
+        <div className="mobile-menu block md:hidden">
+          {!navbarOpen ? (
+            <button
+              onClick={() => setNavbarOpen(true)}
+              className="flex items-center px-3 py-2 0 text-slate-200 hover:text-white hover:border-white"
             >
-              {" "}
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-gray-300 hove:text-white transition-colors"
+              <Bars3Icon className="h-5 w-5" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setNavbarOpen(false)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
             >
-              {" "}
-              About{" "}
-            </a>
-            <a
-              href="#projects"
-              className="text-gray-300 hove:text-white transition-colors"
-            >
-              {" "}
-              Projects{" "}
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-300 hove:text-white transition-colors"
-            >
-              {" "}
-              Contact{" "}
-            </a>
-          </div>
+              <XMarkIcon className="h-5 w-5" />
+            </button>
+          )}
+        </div>
+        <div className="menu hidden md:block md:w-auto" id="navbar">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <NavLink href={link.path} title={link.title} />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
+      {navbarOpen ? (
+  <MenuOverlay links={navLinks} onLinkClick={() => setNavbarOpen(false)} />
+) : null}
     </nav>
   );
 };
+
+export default Navbar;

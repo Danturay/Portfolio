@@ -49,3 +49,8 @@ Tech: Canvas, SVG, or three.js.
 skipped: galexy background, grain background, tape section, testimonial section
 
 about me:Education, My toolbox, hobbies, download cv
+
+<div className="relative overflow-hidden">
+
+      <NeuronsBackground />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80 -z-10"></div>

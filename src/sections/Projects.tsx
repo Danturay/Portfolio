@@ -14,36 +14,36 @@ const portfolioProjects = [
   {
     company: "University of Southampton",
     year: "2025",
-    title: "Intergrating High Dnisty fNIRS with AI for Lie Detection",
+    title: "Intergrating High Denisty fNIRS with AI for Lie Detection",
     results: [
       { title: "Achieved a First Class Honers for this 3rd Year Individual Project" },
       { title: "Conducted participant Trails to collect nurological primary data" },
       { title: "Implement CNN, LSTM and Hybrid Models" },
     ],
-    linkName: "View Live Site",
+    linkName: "Read More",
     link: "https://youtu.be/4k7IdSLxh6w",
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Personal",
+    year: "2025",
+    title: "Fully Functional Skin Cancer Detection App Powered by AI (TODO)",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Used a React fronted with tailwind CSS and FlaskAPI" },
+      { title: "Achieved accuracies of 97%" },
+      { title: "User friendly interface with image upload and results display" },
     ],
     linkName: "View Live Site",
     link: "https://youtu.be/7hi5zwO75yc",
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Personal",
+    year: "2025",
+    title: "Portfolio Website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
+      { title: "Used Next.JS with Tailwind CSS too create an interactive portfolio" },
+      { title: "Used OpenAI API to create a personliased chat able to awnser question about me" },
       { title: "Increased mobile traffic by 35%" },
     ],
     linkName: "View Live Site",
@@ -54,7 +54,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 scroll-mt-20 lg:scroll-m-0 lg:py-24" id="projects">
       <div className="container">
         <SectionHeader 
           eyebrow="Real-world Results"
@@ -65,11 +65,11 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, projectIndex)  => (
 
             <Card key={project.title} className="px-8 py-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky" style={{
-              top: `calc(64px + ${projectIndex * 40}px)`
+              top: `calc(85px + ${projectIndex * 40}px)`
             }}>
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16"> 
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                  <div className="bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                     <span>{project.company}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>

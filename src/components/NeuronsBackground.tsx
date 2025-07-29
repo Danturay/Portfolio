@@ -18,38 +18,55 @@ export const NeuronsBackground = () => {
         fullScreen: { enable: false },
         background: { color: "transparent" },
         particles: {
-          number: {
-            value: 75,
-            density: {
-              enable: true,
-              area: 800,
-            },
-          },
-          color: {
-            value: "#FFD700",
-          },
-          links: {
-            enable: true,
-            distance: 120,
-            color: "#ffffff",
-            opacity: 0.5,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 0.8,
-            direction: "none",
-            outModes: {
-              default: "bounce",
-            },
-          },
-          size: {
-            value: 2,
-          },
-          opacity: {
-            value: 0.5,
-          },
-        },
+  number: {
+    value: 100,
+    density: {
+      enable: true,
+      area: 900,
+    },
+  },
+  color: {
+    value: ["#FFD700", "#FFAC33", "#FFC300"], // Gold shades
+  },
+  links: {
+    enable: true,
+    distance: 100,
+    color: "#FFD700", // Golden link
+    opacity: 0.4,
+    width: 1.5,
+    triangles: {
+      enable: true,
+      opacity: 0.05,
+      color: "#FFD700",
+    },
+  },
+  move: {
+    enable: true,
+    speed: 0.2,
+    direction: "none",
+    random: true,
+    straight: false,
+    outModes: {
+      default: "bounce",
+    },
+  },
+  size: {
+    value: { min: 1, max: 3 },
+  },
+  opacity: {
+    value: 0.8,
+    animation: {
+      enable: true,
+      speed: 0.1,
+      minimumValue: 0.3,
+      sync: false,
+    },
+  },
+  shape: {
+    type: "circle",
+  },
+},
+
         interactivity: {
           events: {
             onHover: {

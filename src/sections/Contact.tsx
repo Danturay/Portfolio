@@ -12,8 +12,8 @@ export const ContactSection = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="font-serif text-2xl md:text-3xl">Lets create something amazing together</h2>
-              <p className="text-sm md:text-base mt-2">A student with a passion for AI looking for his next oppertunity, Lets connect!</p>
+              <h2 className="font-serif text-2xl md:text-3xl">Intrested in working with me?</h2>
+              <p className="text-sm md:text-base mt-2">Aspiring AI developer eager to build intelligent systems that make a real-world impact. Open to research, development, and collaboration.</p>
             </div>
             <div>
               <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">

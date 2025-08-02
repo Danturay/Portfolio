@@ -22,7 +22,7 @@ export const NeuronsBackground = () => {
     value: 100,
     density: {
       enable: true,
-      area: 900,
+      area: 750,
     },
   },
   color: {

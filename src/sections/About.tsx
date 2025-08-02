@@ -10,10 +10,19 @@ import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
+import JavaIcon from "@/assets/icons/java.svg";
+import SqlIcon from "@/assets/icons/sql.svg";
+import TensorFlowIcon from "@/assets/icons/tensorflow.svg";
+import HaskellIcon from "@/assets/icons/haskell.svg";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
+import PythonIcon from "@/assets/icons/python.svg";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import { i } from "framer-motion/client";
+import gradCap from "@/assets/icons/grad.svg";
+import book from "@/assets/icons/book.svg";
 
 const toolboxItems = [
   {
@@ -21,24 +30,36 @@ const toolboxItems = [
     iconType: JavascriptIcon,
   },
    {
-    title: 'HTML5',
-    iconType: HtmlIcon,
-  },
-   {
-    title: 'CSS3',
-    iconType: CssIcon,
-  },
-   {
     title: 'React',
     iconType: ReactIcon,
   },
    {
-    title: 'Chrome',
-    iconType: ChromeIcon,
-  },
-   {
     title: 'Github',
     iconType: GithubIcon,
+  },
+  {
+    title: 'Python',
+    iconType: PythonIcon
+  },
+   {
+    title: 'Java',
+    iconType: JavaIcon,
+  },
+   {
+    title: 'SQL',
+    iconType: SqlIcon,
+  },
+   {
+    title: 'TensorFlow',
+    iconType: TensorFlowIcon,
+  },
+   {
+    title: 'Haskell',
+    iconType: HaskellIcon,
+  },
+   {
+    title: 'Tailwind CSS',
+    iconType: TailwindIcon,
   },
 ]
 
@@ -100,27 +121,39 @@ export const AboutSection = () => {
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid md:grid-cols-5 md:gap-8 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
-              <CardHeader title="Education" description="Explore the grades i have achieved" />
+              <CardHeader title="Education"/>
               <div>
-                <h4>University of Southampton</h4>
-                <p>BSc Computer Science | 2:1 </p>
-                <h4>Beths Grammer School</h4>
-                <ul>
-                  <li>Computer Science | A*</li>
-                  <li>Maths | A*</li>
-                  <li>Physics | A</li>
-                </ul>
+                <div className="flex flex-row gap-3 mb-2">
+                  <TechIcon component={gradCap} className="size-10" />
+                  <div className="mx-auto">
+                    <h4 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] text-center text-transparent bg-clip-text">University of Southampton</h4>
+                    <p className="text-sm text-center">MEng Computer Science with Artifical Intelligence | 2:1</p>
+                  </div>
+                </div>
+                <hr className="border-t-2 border-white/5 mt-4" />
+                <div className="flex items-start gap-3 mt-4">
+                  <TechIcon component={book} className="size-7" />
+                  <div>
+                    <h4 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] text-center text-transparent bg-clip-text">Beths Grammar School</h4>
+                    <ul className="text-sm text-center">
+                      <li>Computer Science | A*</li>
+                      <li>Maths | A*</li>
+                      <li>Physics | A</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
+
             </Card>
             <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
-              <CardHeader title="My Toolbox" description="Tools ive used throughout my journey" className="px-6 pt-6" />
-              <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-left [animation-duration:30s]" />
-              <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:15s]"/>
+              <CardHeader title="My Toolbox" description="l" className="px-6 pt-6" />
+              <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-left [animation-duration:35s]" />
+              <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:20s]"/>
             </Card>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid md:grid-cols-5 md:gap-8 lg:grid-cols-3">
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-              <CardHeader title="Beyond the Code" description="Explore my intrests" className="px-6 py-6" />
+              <CardHeader title="Beyond the Code" className="px-6 py-6" />
               <div className="relative flex-1" ref={constraintRef}>
                 {hobbies.map(hobby => (
                   <motion.div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] rounded-full py-1.5 absolute"
@@ -132,12 +165,16 @@ export const AboutSection = () => {
               </div>
             </Card>
             <Card className="h-[320px] md:col-span-2 lg:col-span-1"> 
-              <CardHeader title="Certifications" description="IDK what to put here" />
-              <ul>
-                <li>AI for Medical Specialisation by DeepLearning.AI (Current)</li>
-                <li>AWS Cloud Practitioner By Amazon (To Do)</li>
-                <li>AWS Machine Learning Engineer - Associate by Amazon (TO DO)</li>
-
+              <CardHeader title="Certifications" />
+     
+                <h4 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] text-transparent bg-clip-text py-2">DeepLearning.AI</h4>
+              <ul className="list-disc ml-3">
+                <li>AI for Medical Specialisation (In Progress)</li>
+              </ul>
+                <h4 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] text-transparent bg-clip-text py-2">Amazon</h4>
+              <ul className="list-disc ml-3">  
+                <li>AWS Cloud Practitioner (To Do)</li>
+                <li>AWS Machine Learning Engineer - Associate (TO DO)</li>
               </ul>
             </Card>
           </div>

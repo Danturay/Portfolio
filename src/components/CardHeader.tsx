@@ -9,7 +9,7 @@ export const CardHeader = ({
     className,
 }: {
     title: string;
-    description: string;
+    description?: string;
     className?: string;
 }) => {
     return (

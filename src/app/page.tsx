@@ -22,31 +22,36 @@ export default function Home() {
   const fadeOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.1]);
 
   return (
-    <div ref={containerRef} className="relative">
-      {/* 🔮 Background with linked opacity */}
+  <div ref={containerRef} className="relative">
+    {/* 🔮 Background */}
+    <motion.div
+      className="fixed inset-0 -z-10 pointer-events-none"
+      style={{ opacity: fadeOpacity }}
+    >
+      <div className="absolute inset-0 blur-[2px] md:blur-[3px]">
+        <NeuronsBackground />
+      </div>
       <motion.div
-        className="fixed inset-0 -z-10 pointer-events-none"
+        className="absolute inset-0 bg-black/10"
         style={{ opacity: fadeOpacity }}
-      >
-        {/* Particles */}
-        <div className="absolute inset-0 blur-[2px] md:blur-[3px]">
-          <NeuronsBackground />
-        </div>
+      />
+    </motion.div>
 
-        {/* Blur Layer (fades with particles) */}
-        <motion.div
-          className="absolute inset-0 bg-black/10"
-          style={{ opacity: fadeOpacity }}
-        />
-      </motion.div>
+    {/* 🧭 Navbar not animated (no jumping) */}
+    <Navbar />
 
-      {/* Main Content */}
-      <Navbar />
+    {/* 🎬 Animate content only */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <HeroSection />
       <ProjectsSection />
       <AboutSection />
       <ContactSection />
       <Footer />
-    </div>
-  );
+    </motion.div>
+  </div>
+);
 }

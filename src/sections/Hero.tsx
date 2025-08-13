@@ -37,10 +37,13 @@ export const HeroSection = () => {
             <ArrowDown className="size-4" />
           </button>
         </a>
-        <button className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl transition-all duration-300 hover:bg-gray-100 hover:shadow-md hover:scale-105">
+        <a href="/contact">
+          <button className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl transition-all duration-300 hover:bg-gray-100 hover:shadow-md hover:scale-105">
           <span>👋</span>
           <span className="font-semibold">Lets Connect</span>
         </button>
+        </a>
+        
        </div>
       </div>
     </section>

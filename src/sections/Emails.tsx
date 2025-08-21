@@ -37,9 +37,9 @@ export const Emails = () => {
    return (
     <section className='grid md:grid-cols-2 gap-8 container px-4 md:px-0'>
         <div>
-            <h5 className='text-xl font-bold text-white my-2'>Let's connect</h5>
+            <h5 className='text-xl font-bold text-white my-2'>Let&apos;s connect</h5>
             <p className='text-[#ADB7BE] mb-4 max-w-md'>
-                If you have any questions or just want to say hi, feel free to reach out via email. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                If you have any questions or just want to say hi, feel free to reach out via email. I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <div className='socials flex flex-row gap-4'>
                 <Link href="https://github.com/Danturay">

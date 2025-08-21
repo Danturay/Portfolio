@@ -1,5 +1,5 @@
 import Image from "next/image";
-import meTemp from "@/assets/images/meTemp.png";
+import me from "@/assets/images/me.jpg";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 
 
@@ -8,8 +8,16 @@ export const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center py-20 px-2" id="home">
       <div className="container">
         <div className="flex flex-col items-center">
-          <Image src={meTemp} alt="Person behind laptop" className="w-36 md:w-48"/>
-       </div>
+  <div className="md:w-52 md:h-52 w-40 h-40 rounded-full overflow-hidden">
+    <Image
+      src={me}
+      alt="Me"
+      width={300}
+      height={300}
+      className="object-cover object-center w-full h-full" style={{ objectPosition: '30% 62%' }}
+    />
+  </div>
+</div>
        <div className="flex justify-center mt-4">
   <div className="font-serif text-3xl md:text-4xl text-center tracking-wide flex flex-col md:flex-row items-center gap-2 md:gap-4">
   {/* Line 1: Student • AI Developer */}
@@ -29,7 +37,7 @@ export const HeroSection = () => {
 </div>
 
 </div>
-       <p className="mt-4 text-center text-white/60 md:text-lg">As a dedicated student in artificial intelligence.</p>
+       <p className="mt-4 text-center text-yellow-400 font-bold text-lg md:text-xl">Note: Website Still in Production</p>
        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
         <a href="#projects">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:scale-105">

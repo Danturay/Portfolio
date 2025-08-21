@@ -114,9 +114,9 @@ export const AboutSection = () => {
     <section className="py-20 lg:py-28" id="about">
       <div className="container">
         <SectionHeader 
-          eyebrow="About Me"
-          title="Crafting Digital Experiences"
-          description="I specialize in creating engaging, user-friendly websites that drive results and enhance brand presence."
+          eyebrow="Exploring AI & Digital Innovation"
+          title="About Me"
+          description="I’m fascinated by AI and love exploring how it can be applied in areas like medical imaging and digital projects. I’m always learning, experimenting, and building along the way."
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid md:grid-cols-5 md:gap-8 lg:grid-cols-3">
@@ -146,7 +146,7 @@ export const AboutSection = () => {
 
             </Card>
             <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
-              <CardHeader title="My Toolbox" description="l" className="px-6 pt-6" />
+              <CardHeader title="My Toolbox" description="Technologies, frameworks, and tools that power my projects." className="px-6 pt-6" />
               <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-left [animation-duration:35s]" />
               <ToolboxItems toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:20s]"/>
             </Card>
@@ -173,8 +173,7 @@ export const AboutSection = () => {
               </ul>
                 <h4 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] text-transparent bg-clip-text py-2">Amazon</h4>
               <ul className="list-disc ml-3">  
-                <li>AWS Cloud Practitioner (To Do)</li>
-                <li>AWS Machine Learning Engineer - Associate (TO DO)</li>
+                <li>AWS AI Practitioner (In Progress)</li>
               </ul>
             </Card>
           </div>

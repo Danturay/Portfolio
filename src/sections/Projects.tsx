@@ -1,13 +1,14 @@
 
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import skinLesionWeb from "@/assets/images/skin_lesion_web2.png";
+import laptop from "@/assets/images/software-laptop.png";
+import portfolioWeb from "@/assets/images/portfolioWeb.png";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg"
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
 import grainImage from '@/assets/images/grain.jpg';
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import GithubIcon from "@/assets/icons/github.svg"
 
 
 const portfolioProjects = [
@@ -22,7 +23,8 @@ const portfolioProjects = [
     ],
     linkName: "Read More",
     link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    readMoreLink: "https://github.com/danteturay/Portfolio",
+    image: laptop,
   },
   {
     company: "Personal",
@@ -35,7 +37,8 @@ const portfolioProjects = [
     ],
     linkName: "View Live Site",
     link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    readMoreLink: "https://github.com/danteturay/skinLesionWebsite",
+    image: skinLesionWeb,
   },
   {
     company: "Personal",
@@ -47,8 +50,9 @@ const portfolioProjects = [
       { title: "Increased mobile traffic by 35%" },
     ],
     linkName: "View Live Site",
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://danteturay.vercel.app/",
+    readMoreLink: "https://github.com/danteturay/Portfolio",
+    image: portfolioWeb,
   },
 ];
 
@@ -84,15 +88,29 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>{project.linkName}</span>
-                      <ArrowUpRightIcon className="size-4" />
-                    </button>
-                  </a>
+                  
+                    <div className="flex flex-row gap-4">
+                      {projectIndex !== 0 && (
+                        <a href={project.link}>
+                          <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                            <span>{project.linkName}</span>
+                            <ArrowUpRightIcon className="size-4" />
+                          </button>
+                        </a>
+                       )}
+      
+                      <a href={project.readMoreLink}>
+                        <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                          <span>Read More</span>
+                          <GithubIcon className="size-4" />
+                        </button>
+                      </a>
+                  
+                    </div>
+
                 </div>
                 <div>
-                  <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"/>
+                  <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 rounded-3xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"/>
                 </div>
               </div>
             </Card>

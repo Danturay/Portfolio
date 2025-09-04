@@ -18,26 +18,26 @@ export const HeroSection = () => {
     />
   </div>
 </div>
-       <div className="flex justify-center mt-4">
+    <div className="flex justify-center mt-4">
   <div className="font-serif text-3xl md:text-4xl text-center tracking-wide flex flex-col md:flex-row items-center gap-2 md:gap-4">
   {/* Line 1: Student • AI Developer */}
   <div className="flex gap-3 md:gap-4">
     <span>Student</span>
     <span className="text-[#C4A045]">&bull;</span>
-    <span>Data Science & AI Developer</span>
+    <span>AI Developer</span>
   </div>
   <div className="flex gap-3 md:hidden">
     <span className="text-[#C4A045]">&bull;</span>
-    <span>Researcher</span>
+    <span>Data Science</span>
   </div>
   <div className="hidden md:flex gap-4">
     <span className="text-[#C4A045]">&bull;</span>
-    <span>Researcher</span>
+    <span>Data Science</span>
   </div>
 </div>
 
 </div>
-       <p className="mt-4 text-center text-yellow-400 font-bold text-lg md:text-xl">Note: Website Still in Production</p>
+       <p className="mt-4 text-center text-white/60 md:text-lg">Driven by curiosity for data science and AI, I explore how intelligent systems can create meaningful impact. From research to full-stack applications, I’m eager to apply my skills across diverse industries, with a particular interest in the growing field of AI in healthcare.</p>
        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
         <a href="#projects">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:scale-105">

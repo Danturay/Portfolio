@@ -15,25 +15,25 @@ const portfolioProjects = [
   {
     company: "University of Southampton",
     year: "2025",
-    title: "Intergrating High Denisty fNIRS with AI for Lie Detection",
+    title: "Integrating High Density fNIRS with AI for Lie Detection",
     results: [
-      { title: "Achieved a First Class Honers for this 3rd Year Individual Project" },
-      { title: "Conducted participant Trails to collect nurological primary data" },
-      { title: "Implement CNN, LSTM and Hybrid Models" },
+      { title: "Conducted participant trails to collect neurological primary data" },
+      { title: "Developed CNN, LSTM, and hybrid AI models for deception detection" },
+      { title: "Achieved accuracies of 82% LOPO-CV, 98% 5-fold-CV and awarded First Class Honours " },
     ],
     linkName: "Read More",
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "",
     readMoreLink: "https://github.com/danteturay/Portfolio",
     image: laptop,
   },
   {
     company: "Personal",
     year: "2025",
-    title: "Fully Functional Skin Cancer Detection App Powered by AI (TODO)",
+    title: "Fully Functional Skin Lesion Detection App Powered by AI",
     results: [
-      { title: "Used a React fronted with tailwind CSS and FlaskAPI" },
-      { title: "Achieved accuracies of 97%" },
-      { title: "User friendly interface with image upload and results display" },
+      { title: "Used a Next.js frontend with Tailwind CSS and a FastAPI Backend" },
+      { title: "Uses can log in to track their lesions overtime" },
+      { title: "Used Firebase Authentication and Firebase Storage" },
     ],
     linkName: "View Live Site",
     link: "https://youtu.be/7hi5zwO75yc",
@@ -45,9 +45,9 @@ const portfolioProjects = [
     year: "2025",
     title: "Portfolio Website",
     results: [
-      { title: "Used Next.JS with Tailwind CSS too create an interactive portfolio" },
-      { title: "Used OpenAI API to create a personliased chat able to awnser question about me" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Used Next.JS with Tailwind CSS to create an interactive portfolio" },
+      { title: "Built modular React components to scale and reuse across sections" },
+      { title: "Leveraged Framer Motion for smooth transitions and engaging interactions" },
     ],
     linkName: "View Live Site",
     link: "https://danteturay.vercel.app/",
@@ -82,8 +82,8 @@ export const ProjectsSection = () => {
                   <hr className="border-t-2 border-white/5 mt-4" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result, index) => (
-                      <li key={index} className="flex gap-2 text-sm md:text-base text-white/50">
-                        <CheckIcon className="size-5 md:size-6" />
+                      <li key={index} className="flex gap-2 text-sm md:text-base text-white/50 items-start">
+                        <CheckIcon className="size-5 md:size-6 shrink-0" />
                         <span>{result.title}</span>
                       </li>
                     ))}

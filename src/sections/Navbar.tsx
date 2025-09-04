@@ -5,7 +5,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import MenuOverlay from "@/sections/MenuOverlay";
 import Image from "next/image";
-import logo from "@/assets//images/fullLogo.png";
+import logo from "@/assets//images/logo.png";
 
 const navLinks = [
   {
@@ -32,37 +32,42 @@ const Navbar = () => {
   return (
     <nav className="fixed mx-auto top-0 left-0 right-0 z-10 backdrop-blur-md bg-transparent bg-opacity-100">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-       <Link href={"/"} className="flex items-center">
-        <Image src={logo} alt="Logo" className="w-40 md:w-48 lg:w-60" />
-        </Link>
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 0 text-slate-200 hover:text-white hover:border-white"
-            >
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
-        </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink href={link.path} title={link.title} />
-              </li>
-            ))}
-          </ul>
-        </div>
+       <Link href={"/"} className="flex items-center gap-2">
+        <Image 
+          src={logo} 
+          alt="Logo" 
+          className="w-10 md:w-12 lg:w-14" 
+        />
+        <span className="lg:text-3xl md:text-2xl text-xl font-bold tracking-wide text-[#C4A045] font-['Arial',sans-serif]">DANTE TURAY</span>
+      </Link>
+      <div className="mobile-menu block md:hidden">
+        {!navbarOpen ? (
+          <button
+            onClick={() => setNavbarOpen(true)}
+            className="flex items-center px-3 py-2 0 text-slate-200 hover:text-white hover:border-white"
+          >
+            <Bars3Icon className="h-5 w-5" />
+          </button>
+        ) : (
+          <button
+            onClick={() => setNavbarOpen(false)}
+            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+          >
+            <XMarkIcon className="h-5 w-5" />
+          </button>
+        )}
       </div>
-      {navbarOpen ? (
+      <div className="menu hidden md:block md:w-auto" id="navbar">
+        <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <NavLink href={link.path} title={link.title} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    {navbarOpen ? (
   <MenuOverlay links={navLinks} onLinkClick={() => setNavbarOpen(false)} />
 ) : null}
     </nav>

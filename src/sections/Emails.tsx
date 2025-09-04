@@ -1,4 +1,4 @@
-'use client'; // If you're using Next.js App Router
+'use client';
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Link from 'next/link';
@@ -18,10 +18,10 @@ export const Emails = () => {
     if (!formRef.current) return;
 
     emailjs.sendForm(
-      'service_hwb0k4h',   // <-- replace this
-      'template_42bj8bs',  // <-- replace this
+      'service_hwb0k4h', 
+      'template_42bj8bs',  
       formRef.current,
-      'QeMTbA0pQuli9EUD9'    // <-- replace this
+      'QeMTbA0pQuli9EUD9'    
     )
     .then((result) => {
       console.log(result.text);
@@ -42,7 +42,7 @@ export const Emails = () => {
                 If you have any questions or just want to say hi, feel free to reach out via email. I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <div className='socials flex flex-row gap-4'>
-                <Link href="https://github.com/Danturay">
+                <Link href="https://github.com/danteturay">
                     <TechIcon component={githubIcon} className="size-10 md:size-12" />
                 </Link>
                 <Link href="https://www.linkedin.com/in/dante-turay/">

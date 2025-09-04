@@ -42,6 +42,7 @@ portfolio-website/
 │   └── Sections/       # Sections of website
 ├── package.json        # Project metadata & dependencies
 └── README.md           # This file
+```
 
 ---
 

@@ -37,7 +37,7 @@ export const HeroSection = () => {
 </div>
 
 </div>
-       <p className="mt-4 text-center text-white/60 md:text-lg">Driven by curiosity for data science and AI, I explore how intelligent systems can create meaningful impact. From research to full-stack applications, I’m eager to apply my skills across diverse industries, with a particular interest in the growing field of AI in healthcare.</p>
+       <p className="mt-4 text-center text-white/60 md:text-lg">Driven by curiosity for data science and AI, I explore how intelligent systems can create meaningful impact. From research to full-stack applications, I&apos;m eager to apply my skills across diverse industries, with a particular interest in the growing field of AI in healthcare.</p>
        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
         <a href="#projects">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:scale-105">

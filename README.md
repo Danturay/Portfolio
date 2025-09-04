@@ -6,7 +6,7 @@ This repository contains the source code for my personal **portfolio website**, 
 
 ## 🌐 Website
 
-You can view the live website here: [Your Website URL](https://yourwebsite.com)
+You can view the live website here: [danteturay.vercel.app]([https://yourwebsite.com](https://danteturay.vercel.app/))
 
 ---
 
@@ -48,5 +48,6 @@ portfolio-website/
 
 ## 📫 Contact
 
-[text](https://www.linkedin.com/in/dante-turay/)
+[Linkedin](https://www.linkedin.com/in/dante-turay/)
+
 Email - dante.turay1@gmail.com

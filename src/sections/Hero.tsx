@@ -24,7 +24,7 @@ export const HeroSection = () => {
   <div className="flex gap-3 md:gap-4">
     <span>Student</span>
     <span className="text-[#C4A045]">&bull;</span>
-    <span>AI Developer</span>
+    <span>Data Science & AI Developer</span>
   </div>
   <div className="flex gap-3 md:hidden">
     <span className="text-[#C4A045]">&bull;</span>

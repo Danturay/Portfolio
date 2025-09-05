@@ -95,7 +95,7 @@ const hobbies = [
     top: "25%"
   },
   {
-    title: "Reaserch",
+    title: "Research",
     emoji: "💻",
     left: "5%",
     top: "65%"
@@ -127,7 +127,7 @@ export const AboutSection = () => {
                   <TechIcon component={gradCap} className="size-10" />
                   <div className="mx-auto">
                     <h4 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] text-center text-transparent bg-clip-text">University of Southampton</h4>
-                    <p className="text-sm text-center">MEng Computer Science with Artifical Intelligence | 2:1</p>
+                    <p className="text-sm text-center">MEng Computer Science with Artificial Intelligence | 2:1</p>
                   </div>
                 </div>
                 <hr className="border-t-2 border-white/5 mt-4" />
@@ -169,7 +169,7 @@ export const AboutSection = () => {
      
                 <h4 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] text-transparent bg-clip-text py-2">DeepLearning.AI</h4>
               <ul className="list-disc ml-3">
-                <li>AI for Medical Specialisation (In Progress)</li>
+                <li>AI for Medical specialisation (In Progress)</li>
               </ul>
                 <h4 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-[#F3DFA7] to-[#C4A045] text-transparent bg-clip-text py-2">Amazon</h4>
               <ul className="list-disc ml-3">  
